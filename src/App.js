@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
+import Heading from './components/Heading';
+import HotAccessoriesMenu from "./components/HotAccessoriesMenu.js";
+import Navbar from "./components/Navbar.js";
+import Offers from "./components/Offers.js";
+import PreNavbar from './components/PreNavbar';
+import Slider from "./components/Slider.js";
+import StarProduct from "./components/StarProduct.js";
+import data from "./data/data.json";
+function App ()
+{
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <PreNavbar />
+      <Navbar />
+      <Slider start={ data.banner.start } />
+      <Offers offer={ data.offer } />
+      <Heading text="STAR PRODUCTS" />
+      <StarProduct starProduct={ data.starProduct } />
+      <Heading text="HOT ACCESSORIES" />
+      <HotAccessoriesMenu />
+    </Router>
+
   );
 }
 
