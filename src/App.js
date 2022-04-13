@@ -1,6 +1,7 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
 import Heading from './components/Heading';
+import HotAccessories from "./components/HotAccessories";
 import HotAccessoriesMenu from "./components/HotAccessoriesMenu.js";
 import Navbar from "./components/Navbar.js";
 import Offers from "./components/Offers.js";
@@ -21,6 +22,10 @@ function App ()
       <StarProduct starProduct={ data.starProduct } />
       <Heading text="HOT ACCESSORIES" />
       <HotAccessoriesMenu />
+      <Routes>
+        <Route path='/music' element={ <HotAccessories music={ data.hotAccessories.music } musicCover={ data.hotAccessoriesCover.music
+        } /> } />
+      </Routes>
     </Router>
 
   );
