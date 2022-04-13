@@ -23,8 +23,22 @@ function App ()
       <Heading text="HOT ACCESSORIES" />
       <HotAccessoriesMenu />
       <Routes>
-        <Route path='/music' element={ <HotAccessories music={ data.hotAccessories.music } musicCover={ data.hotAccessoriesCover.music
-        } /> } />
+        <Route path='/music' element={ <
+          // @ts-ignore
+          HotAccessories music={ data.hotAccessories.music } musicCover={ data.hotAccessoriesCover.music } /> } />
+        <Route path='/smartDevice' element={ <
+          // @ts-ignore
+          HotAccessories smartDevices={ data.hotAccessories.smartDevice } smartDevicesCover={ data.hotAccessoriesCover.smartDevice } /> } />
+        <Route path='/home' element={ <
+          // @ts-ignore
+          HotAccessories home={ data.hotAccessories.home } homeCover={ data.hotAccessoriesCover.home } /> } />
+        <Route path='/lifestyle' element={ <
+          // @ts-ignore
+          HotAccessories lifeStyle={ data.hotAccessories.lifeStyle } lifeStyleCover={ data.hotAccessoriesCover.lifeStyle } /> } />
+        <Route path='/mobileAccessories' element={ <
+          // @ts-ignore
+          HotAccessories mobileAccessories={ data.hotAccessories.mobileAccessories } mobileAccessoriesCover={ data.hotAccessoriesCover.mobileAccessories } /> } />
+
       </Routes>
     </Router>
 
@@ -32,3 +46,5 @@ function App ()
 }
 
 export default App;
+
+// Adding the @its- ignore because  i just want to pass 2 props from each section not all the props
