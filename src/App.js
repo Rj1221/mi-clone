@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
+import Banner from './components/Banner';
+import Footer from "./components/Footer";
 import Heading from './components/Heading';
 import HotAccessories from "./components/HotAccessories";
 import HotAccessoriesMenu from "./components/HotAccessoriesMenu.js";
@@ -45,7 +47,9 @@ function App ()
       <ProductReview productReviews={ data.productReviews } />
       <Heading text="VIDEOS" />
       <Videos videos={ data.videos } />
-
+      <Heading text="IN THE PRESS" />
+      <Banner banner={ data.banner.end } />
+      <Footer />
     </Router>
 
   );
