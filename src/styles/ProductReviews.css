@@ -1,7 +1,6 @@
-
-.ProductReviews{
-    display: flex;
-    width: 90vw;
-    margin: auto;
-    justify-content: center;
+.ProductReviews {
+  display: flex;
+  width: 90vw;
+  margin: auto;
+  justify-content: center;
 }

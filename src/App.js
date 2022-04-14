@@ -6,6 +6,7 @@ import HotAccessoriesMenu from "./components/HotAccessoriesMenu.js";
 import Navbar from "./components/Navbar.js";
 import Offers from "./components/Offers.js";
 import PreNavbar from './components/PreNavbar';
+import ProductReview from "./components/ProductReview";
 import Slider from "./components/Slider.js";
 import StarProduct from "./components/StarProduct.js";
 import data from "./data/data.json";
@@ -38,8 +39,9 @@ function App ()
         <Route path='/mobileAccessories' element={ <
           // @ts-ignore
           HotAccessories mobileAccessories={ data.hotAccessories.mobileAccessories } mobileAccessoriesCover={ data.hotAccessoriesCover.mobileAccessories } /> } />
-
       </Routes>
+      <Heading text="PRODUCT REVIEWS" />
+      <ProductReview productReviews={ data.productReviews } />
     </Router>
 
   );
