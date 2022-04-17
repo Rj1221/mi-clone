@@ -13,6 +13,7 @@ import Slider from "./components/Slider.js";
 import StarProduct from "./components/StarProduct.js";
 import Videos from "./components/Videos";
 import data from "./data/data.json";
+import NavOptions from "./components/NavOptions";
 function App ()
 {
 
@@ -20,6 +21,7 @@ function App ()
     <Router>
       <PreNavbar />
       <Navbar />
+      <NavOptions/>
       <Slider start={ data.banner.start } />
       <Offers offer={ data.offer } />
       <Heading text="STAR PRODUCTS" />
@@ -49,7 +51,7 @@ function App ()
       <Videos videos={ data.videos } />
       <Heading text="IN THE PRESS" />
       <Banner banner={ data.banner.end } />
-      <Footer />
+      <Footer footer={ data.footer } />
     </Router>
 
   );

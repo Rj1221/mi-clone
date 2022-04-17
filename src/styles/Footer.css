@@ -71,3 +71,8 @@ transition: all 0.5s;
    font-size: 0.98vmax;
 }
 
+.footerBorder>div>p{
+    color: rgb(197, 197, 197);
+   font-size: 0.98vmax;
+   top: 0;
+}
